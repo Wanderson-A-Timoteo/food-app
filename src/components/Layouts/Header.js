@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo/logo.png";
 import "../../styles/HeaderStyle.css";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const location = useLocation();
 
   // Scroll Navbar
   useEffect(() => {
@@ -26,7 +27,8 @@ const Header = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className={`${nav === true ? "sticky" : ""}`}
+        /* Se nav for true, recebe 'sticky'. Se a rota não for '/', recebe 'text-dark-nav' */
+        className={`${nav === true ? "sticky" : ""} ${location.pathname !== "/" ? "text-dark-nav" : ""}`}
       >
         <Container>
           <Navbar.Brand href="#home">
