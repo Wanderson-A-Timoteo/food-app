@@ -1,0 +1,51 @@
+.contact_page_section {
+  background-color: var(--light-grey);
+  min-height: 80vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title_contact {
+  font-size: 3.5rem;
+  color: var(--bg-coffee);
+  margin-top: 50px;
+}
+
+.subtitle_contact {
+  color: var(--grey);
+  font-size: 1.25rem;
+  font-family: var(--roboto-font);
+}
+
+.contact_form_wrapper {
+  background-color: var(--white);
+  border-top: 5px solid var(--yellow);
+}
+
+.contact_form_wrapper label {
+  font-family: var(--oswald-font);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--light-black);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contact_form_wrapper .form-control {
+  border-radius: 4px;
+  padding: 12px 15px;
+  border: 1px solid var(--light-grey-2);
+}
+
+.contact_form_wrapper .form-control:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 0.25rem rgba(247, 190, 39, 0.25);
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .title_contact {
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+}
