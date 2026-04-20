@@ -12,17 +12,24 @@ function Footer() {
     });
   };
 
-  const listenToScroll = () => {
-    let heightToHidden = 250;
-    const windowScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    windowScroll > heightToHidden ? setIsVisible(true) : setIsVisible(false);
-  };
-
+  // Scroll seguro
   useEffect(() => {
+    const listenToScroll = () => {
+      let heightToHidden = 250;
+      const windowScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+
+      windowScroll > heightToHidden ? setIsVisible(true) : setIsVisible(false);
+    };
+
     window.addEventListener("scroll", listenToScroll);
-  });
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", listenToScroll);
+    };
+  }, []);
+
   return (
     <>
       <footer>
