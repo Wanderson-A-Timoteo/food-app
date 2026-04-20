@@ -1,0 +1,95 @@
+/* Container */
+.menu_page_section {
+  background-color: var(--white);
+  min-height: 80vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Títulos */
+.title_menu {
+  font-size: 3.5rem;
+  color: var(--light-red);
+  margin-top: 50px;
+}
+
+.subtitle_menu {
+  color: var(--grey);
+  font-size: 1.25rem;
+  font-family: var(--roboto-font);
+}
+
+/* ESTILOS DOS CARDS */
+.menu_page_section .card-img-top {
+  transition: all 500ms ease-in-out;
+}
+
+.menu_page_section .item_rating i {
+  color: var(--yellow);
+  padding-right: 5px;
+}
+
+.menu_page_section .wishlist i {
+  color: var(--grey);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu_page_section .wishlist i:hover {
+  color: var(--light-red);
+}
+
+.menu_page_section .card-title {
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.menu_page_section .card-text {
+  color: var(--grey);
+  font-size: 15px;
+}
+
+.menu_page_section .menu_price {
+  background-color: var(--bg-coffee);
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 4px;
+}
+
+.menu_page_section .menu_price h5 {
+  color: var(--yellow);
+  font-size: 1rem;
+}
+
+/* Animação do Botão "Adicionar" */
+.menu_page_section .add_to_card a {
+  background: var(--yellow);
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 500ms ease-in-out;
+}
+
+.menu_page_section .card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.menu_page_section .card:hover .add_to_card a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .title_menu {
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+}
