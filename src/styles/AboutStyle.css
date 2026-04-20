@@ -1,0 +1,38 @@
+.about_page_section {
+  background-color: var(--light-grey);
+  min-height: 80vh;
+}
+
+.title_about {
+  font-size: 3.5rem;
+  color: var(--bg-coffee);
+  margin-top: 50px;
+}
+
+.subtitle_about {
+  color: var(--light-red);
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: var(--oswald-font);
+  text-transform: uppercase;
+}
+
+.about_page_section h3 {
+  color: var(--bg-coffee);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about_page_section p {
+  color: var(--grey);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 767px) {
+  .title_about {
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+}
