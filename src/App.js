@@ -4,6 +4,8 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Menu from "./pages/Menu/Menu";
 import Contact from "./pages/Contact/Contact";
+import Shop from "./pages/Shop/Shop";
+import Blog from "./pages/Blog/Blog";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </Router>
   );

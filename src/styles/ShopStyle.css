@@ -1,0 +1,16 @@
+.shop_page_section {
+  background-color: var(--white);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.title_shop {
+  font-size: 3.5rem;
+  color: var(--bg-coffee);
+}
+
+.subtitle_shop {
+  color: var(--grey);
+  font-size: 1.25rem;
+}

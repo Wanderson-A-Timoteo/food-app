@@ -1,0 +1,16 @@
+.blog_page_section {
+  background-color: var(--light-grey);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.title_blog {
+  font-size: 3.5rem;
+  color: var(--light-red);
+}
+
+.subtitle_blog {
+  color: var(--grey);
+  font-size: 1.25rem;
+}
