@@ -17,7 +17,7 @@ Bem-vindo ao repositório do **Tasty Burger**, uma aplicação web front-end des
 
 > Projeto focado na construção de Single Page Applications (SPA), navegação sem recarregamento (Client-Side Routing) e otimização de performance e ciclo de vida de componentes.
 
-🔗 **Demo Online:** [https://wanderson-a-timoteo.github.io/food-app/]
+🔗 **Demo Online:** [food-app.github.io](https://wanderson-a-timoteo.github.io/food-app/)
 
 <br>
 
