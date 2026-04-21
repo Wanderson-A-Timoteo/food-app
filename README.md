@@ -94,6 +94,27 @@ Caso tenham dúvidas sobre o código do projeto, sintam-se a vontade em abrir um
 
 <br>
 
+## 🌐 Hospedagem e Roteamento (GitHub Pages)
+
+Este projeto está hospedado e disponível publicamente através do **GitHub Pages**. Para garantir que a navegação da aplicação funcione de maneira impecável em um ambiente de servidor de arquivos estáticos, adotamos uma estratégia específica de roteamento.
+
+### A Escolha do HashRouter
+
+Por padrão, SPAs em React utilizam o `BrowserRouter`. No entanto, em servidores como o GitHub Pages, isso gera um **Erro 404** se o usuário tentar recarregar a página (F5) em uma rota interna (ex: `/menu`), pois o servidor tenta localizar um arquivo físico `menu.html` que não existe (já que toda a aplicação roda dentro do `index.html`).
+
+Para resolver esse comportamento e manter a resiliência do projeto, o código foi refatorado para utilizar o **`HashRouter`**:
+- **Como funciona:** Ele injeta uma "hashtag" na URL (ex: `https://seu-usuario.github.io/food-app/#/menu`).
+- **O Resultado:** O servidor do GitHub sempre processa a requisição apontando para a raiz (`index.html`), permitindo que o React intercepte o caminho que vem após o `#` e renderize o componente correto dinamicamente. Isso evita qualquer tipo de "tela em branco" em atualizações de página.
+
+### Deploy Automatizado
+
+O deploy da aplicação foi automatizado no `package.json` utilizando a biblioteca `gh-pages`. Com os scripts abaixo, o processo de gerar a build de produção e enviar os arquivos otimizados para a branch de deploy é feito com um único comando:
+
+- `"predeploy": "npm run build"`
+- `"deploy": "gh-pages -d build"`
+
+<br>
+
 ## Autor:
 
 Feito com ♥ by
